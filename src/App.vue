@@ -11,7 +11,8 @@
         </el-aside>
         <el-main class="box">
           <div class="title-box">
-            <el-breadcrumb separator-class="el-icon-arrow-right">
+            <span>您的位置：</span>
+            <el-breadcrumb separator-class="el-icon-arrow-right" style="padding:4px">
               <el-breadcrumb-item v-for="(item,index) in this.$route.meta" :key="index">{{item}}</el-breadcrumb-item>
             </el-breadcrumb>
           </div>
@@ -41,4 +42,9 @@ export default {
 </script>
 
 <style>
+.title-box span{
+  display: inline-block;
+  float: left;
+  margin-right: 10px;
+}
 </style>

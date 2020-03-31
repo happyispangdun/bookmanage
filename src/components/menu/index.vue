@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-27 15:02:59
- * @LastEditTime: 2020-03-31 15:38:34
+ * @LastEditTime: 2020-03-31 15:48:17
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bookmanage\src\components\menu\Menu.vue
@@ -13,7 +13,7 @@
       class="el-menu-vertical-demo"
       background-color="#545c64"
       text-color="#fff"
-      unique-opened=true
+      :unique-opened='uniqueOpened'
       router
       active-text-color="#ffd04b"
     >
@@ -53,7 +53,7 @@
 export default {
   data () {
     return {
-      current: '',
+      uniqueOpened: true,
       menuList: [
         {
           index: '/',
