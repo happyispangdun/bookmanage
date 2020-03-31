@@ -1,7 +1,7 @@
 <!--
  * @Author: your name
  * @Date: 2020-03-27 15:02:59
- * @LastEditTime: 2020-03-27 16:50:29
+ * @LastEditTime: 2020-03-31 15:38:34
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bookmanage\src\components\menu\Menu.vue
@@ -11,9 +11,9 @@
     <el-menu
       default-active="2"
       class="el-menu-vertical-demo"
-      @select="handleIsActived"
       background-color="#545c64"
       text-color="#fff"
+      unique-opened=true
       router
       active-text-color="#ffd04b"
     >
@@ -78,10 +78,6 @@ export default {
     }
   },
   methods: {
-    handleIsActived () {
-      this.current = this.$route.meta
-      this.$emit('getPaht', this.current)
-    }
   }
 }
 </script>

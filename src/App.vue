@@ -7,12 +7,12 @@
           width="220px"
           class="box"
         >
-          <Menu @getPaht="handleMenuPaht"></Menu>
+          <Menu></Menu>
         </el-aside>
         <el-main class="box">
           <div class="title-box">
             <el-breadcrumb separator-class="el-icon-arrow-right">
-              <el-breadcrumb-item v-for="(item,index) in menuPaht" :key="index">{{item}}</el-breadcrumb-item>
+              <el-breadcrumb-item v-for="(item,index) in this.$route.meta" :key="index">{{item}}</el-breadcrumb-item>
             </el-breadcrumb>
           </div>
           <router-view />
@@ -30,18 +30,12 @@ export default {
   name: 'App',
   data () {
     return {
-      menuPaht: []
     }
   },
   components: {
     Menu
   },
   methods: {
-    handleMenuPaht (path) {
-      console.log(path)
-      this.menuPaht = path
-      console.log(this.menuPath)
-    }
   }
 }
 </script>
