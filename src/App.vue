@@ -4,7 +4,7 @@
       <el-header class="header-box"></el-header>
       <el-container>
         <el-aside
-          width="220px"
+          width="auto"
           class="box"
         >
           <Menu></Menu>
