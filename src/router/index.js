@@ -7,7 +7,8 @@ export default new Router({
   routes: [
     {
       path: '/',
-      meta: ['首页']
+      meta: ['首页'],
+      component: resolve => require(['@/pages/index/index.vue'], resolve)
     },
     {
       path: '/test-1',
