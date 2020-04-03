@@ -1,7 +1,7 @@
 /*
  * @Author: your name
  * @Date: 2020-03-27 14:12:43
- * @LastEditTime: 2020-03-27 14:45:56
+ * @LastEditTime: 2020-04-03 14:30:31
  * @LastEditors: Please set LastEditors
  * @Description: In User Settings Edit
  * @FilePath: \bookmanage\src\utils\request.js
@@ -17,7 +17,7 @@ if (process.env.NODE_ENV === 'development') {
   axios.defaults.baseURL = ''
 }
 
-const server = axios.create({
+export const server = axios.create({
   baseURL: axios.defaults.baseURL,
   timeout: 10000
 })
@@ -45,4 +45,6 @@ server.interceptors.response.use(
 
 )
 
-export default server
+export const serverAll = function (functions, callback) {
+  return axios.all(functions).then(axios.spread(callback))
+}
